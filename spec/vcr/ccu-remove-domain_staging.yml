@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://private-anon-74329c9bea-akamaiopen2purgeccuv2production.apiary-mock.com/ccu/v2/queues/default
+    body:
+      encoding: UTF-8
+      string: '{"domain":"staging","objects":["https://example.com/","https://example.net/"],"action":"remove","type":"arl"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Authorization:
+      - EG1-HMAC-SHA256 client_token=clienttoken;access_token=accesstoken;timestamp=20160803T13:09:02+0000;nonce=31e9c6e5-8a7a-4c10-aeac-1bdc153a4951;signature=L4ro/DnqlwM4OxBjsz2q53tNh9rofnccncnPo1q3Cgo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Apiary-Ratelimit-Limit:
+      - '120'
+      X-Apiary-Ratelimit-Remaining:
+      - '117'
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT
+      Access-Control-Max-Age:
+      - '10'
+      X-Apiary-Transaction-Id:
+      - 57a1eceeceff940b00f4c56b
+      Content-Length:
+      - '277'
+      Date:
+      - Wed, 03 Aug 2016 13:09:02 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+         "estimatedSeconds": 420,
+         "progressUri": "/ccu/v2/purges/57799d8b-10e4-11e4-9088-62ece60caaf0",
+         "purgeId": "57799d8b-10e4-11e4-9088-62ece60caaf0",
+         "supportId": "17PY1405953363409286-284546144",
+         "httpStatus": 201,
+         "detail": "Request accepted.",
+         "pingAfterSeconds": 420
+        }
+    http_version: 
+  recorded_at: Wed, 03 Aug 2016 13:09:02 GMT
+recorded_with: VCR 3.0.3
